@@ -6,7 +6,7 @@ $password = 'doraminG23!';
 try {
     $dbh = new PDO($dsn, $user, $password);
   	
-  	$sql = "select * from sample;";
+  	$sql = "select * from user;";
 	$result = $dbh -> query($sql);
 } catch (PDOException $e) {
     print "Failed: " . $e->getMessage() . "\n";
@@ -19,7 +19,7 @@ try {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INDEX</title>
+<title>INDEX1</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
@@ -73,15 +73,41 @@ try {
                     <tbody>
 						<?php foreach($result as $value){ ?>
                         <tr>
-                            <th><?php echo '$value[id]'; ?></th>
-                            <td><?php echo '$value[name]'; ?></td>
-                            <td><?php echo '$value[age]'; ?></td>
+                            <th><?php echo "$value[id]"; ?></th>
+                            <td><?php echo "$value[name]"; ?></td>
+                            <td><?php echo "$value[age]"; ?></td>
 						</tr>
 						<?php}?>
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane" id="insert">
+                <form action="./insert.php" method="POST">
+                    <div class="form-group row">
+                            <label for="id" class="col-sm-2 col-form-label">ID</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="id" name="id">
+                            </div>
+                    </div>
+                </form>
+
+                <form action="./insert.php" method="POST">
+                    <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">NAME</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                    </div>
+                </form>
+
+                <form action="./insert.php" method="POST">
+                    <div class="form-group row">
+                            <label for="age" class="col-sm-2 col-form-label">AGE</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="age" name="age">
+                            </div>
+                    </div>
+                </form>
                 <p>sample tabs2</p>
             </div>
             <div class="tab-pane" id="update">
@@ -94,7 +120,10 @@ try {
 
     </div>
 
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 
 </body>
 
