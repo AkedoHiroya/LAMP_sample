@@ -7,7 +7,8 @@ try {
     $dbh = new PDO($dsn, $user, $password);
   	
   	$sql = "select * from user;";
-	$result = $dbh -> query($sql);
+    $result = $dbh -> query($sql);
+    
 } catch (PDOException $e) {
     print "Failed: " . $e->getMessage() . "\n";
     exit();
@@ -77,7 +78,7 @@ try {
                             <td><?php echo "$value[name]"; ?></td>
                             <td><?php echo "$value[age]"; ?></td>
 						</tr>
-						<?php}?>
+						<?php } ?>
                     </tbody>
                 </table>
             </div>
