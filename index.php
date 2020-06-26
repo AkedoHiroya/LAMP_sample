@@ -82,30 +82,28 @@ try {
                 </table>
             </div>
             <div class="tab-pane" id="insert">
-                <form action="./insert.php" method="POST">
+                <form action="./insert.php" method="POST" class="mt-3">
                     <div class="form-group row">
                             <label for="id" class="col-sm-2 col-form-label">ID</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="id" name="id">
                             </div>
                     </div>
-                </form>
-
-                <form action="./insert.php" method="POST">
                     <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label">NAME</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="name" name="name">
                             </div>
                     </div>
-                </form>
-
-                <form action="./insert.php" method="POST">
                     <div class="form-group row">
                             <label for="age" class="col-sm-2 col-form-label">AGE</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="age" name="age">
                             </div>
+                    </div>
+
+                    <div class="form-group row">
+                            <button type="submit" class="btn btn-primary btn block">insert</button>
                     </div>
                 </form>
                 <p>sample tabs2</p>
