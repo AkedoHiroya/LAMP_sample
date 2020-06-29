@@ -11,7 +11,7 @@ try {
     $name = $_POST['name'];
     $age = $_POST['age'];
   	
-    $sql = "update user set name=:name , age =:age , where id = :id";
+    $sql = "update user set name=:name , age =:age  where id = :id";
     $stmt = $dbh->prepare($sql);
     $prams = array(':id' => $id , ':name' => $name , ':age' => $age);
     $stmt->execute($prams);
