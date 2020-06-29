@@ -104,7 +104,7 @@ try {
                     </div>
 
                     <div class="form-group row">
-                            <button type="submit" class="btn btn-primary btn block">insert</button>
+                            <button type="submit" class="btn btn-primary btn-block">insert</button>
                     </div>
                 </form>
                 <p>sample tabs2</p>
