@@ -149,7 +149,7 @@ try {
                         </tr>
                     </thead>
                     <tbody>
-						<?php foreach($resul2 as $value){ ?>
+						<?php foreach($result2 as $value){ ?>
                         <tr>
                             <th><?php echo "$value[id]"; ?></th>
                             <td><?php echo "$value[name]"; ?></td>
