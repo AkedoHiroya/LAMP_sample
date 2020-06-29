@@ -8,6 +8,7 @@ try {
   	
   	$sql = "select * from user;";
     $result = $dbh -> query($sql);
+    $result2 = $dbh -> query($sql);
     
 } catch (PDOException $e) {
     print "Failed: " . $e->getMessage() . "\n";
@@ -137,6 +138,32 @@ try {
                 <p>sample tabs3</p>
             </div>
             <div class="tab-pane" id="delete">
+                <table class="table table-hover mt-3">
+                    <caption>Sample DB show user table</caption>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+						<?php foreach($resul2 as $value){ ?>
+                        <tr>
+                            <th><?php echo "$value[id]"; ?></th>
+                            <td><?php echo "$value[name]"; ?></td>
+                            <td><?php echo "$value[age]"; ?></td>
+                            <td>
+                                <form action="" method="GET">
+                                    <input class="d-none" type="text" name="id" value="<?php echo "$value[id]"; ?>">
+                                    <button type="submit" class="btn btn-danger">delete</button>
+                                </form>
+                            </td>
+						</tr>
+						<?php } ?>
+                    </tbody>
+                </table>
                 <p>sample tabs4</p>
             </div>
         </div>
