@@ -45,6 +45,12 @@ try {
         </div>
     </div>
 
+    <?php if($_GET['fg'] = 1){ ?>
+        <p>success</p>
+    <?php }else if($_GET['fg']== 2){ ?>
+        <p>failed</p>
+    <?php } ?>
+
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item">
