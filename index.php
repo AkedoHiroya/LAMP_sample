@@ -173,7 +173,7 @@ try {
                             <td><?php echo "$value[name]"; ?></td>
                             <td><?php echo "$value[age]"; ?></td>
                             <td>
-                                <form action="" method="GET">
+                                <form action="delete.php" method="GET">
                                     <input class="d-none" type="text" name="id" value="<?php echo "$value[id]"; ?>">
                                     <button type="submit" class="btn btn-danger">delete</button>
                                 </form>
