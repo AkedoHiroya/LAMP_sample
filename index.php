@@ -45,11 +45,23 @@ try {
         </div>
     </div>
 
-    <?php if($_GET['fg'] == 1){ ?>
-        <p>success</p>
-    <?php }else if($_GET['fg']== 2){ ?>
-        <p>failed</p>
-    <?php } ?>
+    <div class="container">
+        <?php if($_GET['fg'] == 1){ ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>処理が完了しました</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <?php }else if($_GET['fg']== 2){ ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>処理が完了しませんでした</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <?php } ?>
+    </div>
 
     <div class="container">
         <ul class="nav nav-tabs">
